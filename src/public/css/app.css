@@ -1,0 +1,151 @@
+/* ===============================
+   共通設定
+=============================== */
+body {
+    background-color: #fff; /* 全ページ共通の背景色 */
+    color: #a78d74;
+    font-family: "Hiragino Mincho ProN", sans-serif;
+    line-height: 0.4;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===============================
+   ヘッダー
+=============================== */
+.header {
+    padding: 20px 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0d5c6;
+}
+
+/* ヘッダー内部レイアウト（中央寄せ） */
+.header__inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #a78d74;
+}
+
+/* Register / Login ボタン右上配置 */
+.header__btn {
+    position: absolute;
+    right: 20px;
+    border: 2px solid #d8c4b0;
+    color: #d8c4b0;
+    background-color: #f3f3f3;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 2px;
+    font-weight: none;
+    transition: 0.3s;
+}
+
+.header__btn:hover {
+    background-color: #b58e6b;
+    color: #fff;
+}
+
+/* ===============================
+   ページ共通タイトル
+=============================== */
+h2 {
+    text-align: center;
+    font-size: 22px;
+    color: #a78d74;
+    font-weight: bold;
+    margin: 40px 0 30px;
+}
+
+/* ===============================
+   ボタン共通デザイン
+=============================== */
+.btn {
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: normal;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid #B69B82;
+    transition: 0.3s ease;
+}
+
+.btn__submit {
+    background-color: #B69B82;
+    color: #FFFFFF;
+}
+
+.btn__back {
+    background-color: #fff;
+    color: #B69B82;
+}
+
+.btn__submit:hover,
+.btn__back:hover {
+    background-color: #B69B82;
+    color: #FFFFFF;
+}
+
+/* ===============================
+   確認画面テーブル
+=============================== */
+.table__confirm {
+    width: 70%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.table__confirm th {
+    background-color: #d8c4b0;
+    color: #a78d74;
+    text-align: left;
+    padding: 12px;
+    width: 30%;
+    vertical-align: middle;
+}
+
+.table__confirm td {
+    border: 1px solid #eee;
+    padding: 12px;
+    vertical-align: middle;
+}
+
+/* ===============================
+   サンクスページ
+=============================== */
+.thanks__content {
+    text-align: center;
+    margin-top: 180px;
+}
+
+.thanks__content h2 {
+    font-size: 22px;
+    color: #3a2b20;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.thanks__button a {
+    display: inline-block;
+    background-color: #b58e6b;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.thanks__button a:hover {
+    background-color: #8d6b4f;
+}

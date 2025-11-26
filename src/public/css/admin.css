@@ -1,0 +1,98 @@
+body {
+    background-color: #f7f1eb;
+    font-family: 'Hiragino Mincho ProN', sans-serif;
+}
+
+.admin__content {
+    width: 800px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.admin__title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* ==========================
+   検索フォーム 全体
+========================== */
+.admin-search {
+    width: 900px;
+    margin: 0 auto 40px auto;
+    padding: 20px 25px;
+    background-color: #fff;
+    border: 1px solid #d9cbbf;
+    border-radius: 6px;
+}
+
+/* ==========================
+   入力エリア（横並び）
+========================== */
+.admin-search__group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.admin-search__group input,
+.admin-search__group select {
+    height: 38px;
+    padding: 0 10px;
+    border: 1px solid #dcd2c8;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fff;
+    min-width: 160px;
+}
+
+/* プレースホルダー色 */
+.admin-search__group input::placeholder {
+    color: #bbb;
+}
+
+/* ==========================
+   ボタン（検索＆リセット）
+========================== */
+.admin-search__buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-search {
+    background-color: #8e7a65;
+    color: #fff;
+    padding: 8px 30px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-reset {
+    padding: 7px 28px;
+    border: 1px solid #8e7a65;
+    border-radius: 4px;
+    color: #8e7a65;
+    background-color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+
+.admin__table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.admin__table th,
+.admin__table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
