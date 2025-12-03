@@ -29,15 +29,11 @@ Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::match(['get', 'post'], '/contact', [ContactController::class, 'index'])->name('contact.index');
 // ログイン必須ページ
-Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+//Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 
 Route::middleware('auth')->group(function () {
 
     // 管理画面
-    Route::get('/admin', function () {
-        return view('admin');
-    })->middleware('auth')->name('admin');
-
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
 
     Route::get('/search', function () {

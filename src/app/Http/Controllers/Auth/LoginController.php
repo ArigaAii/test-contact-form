@@ -18,7 +18,7 @@ class LoginController extends Controller
     public function login(LoginRequest $request)
     {
         $credentials = $request->only('email', 'password');
-        
+
         //メールアドレス存在チェック
         if (!\App\Models\User::where('email', $request->email)->exists()) {
             return back()
@@ -27,7 +27,7 @@ class LoginController extends Controller
         }
 
         // 認証試行
-        if (Auth::attempt($credentials)) {
+        if (!Auth::attempt($credentials)) {
             return back()
                 ->withErrors(['password' => 'パスワードに誤りがあります'])
                 ->withInput();

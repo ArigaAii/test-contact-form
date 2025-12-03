@@ -10,9 +10,9 @@
     <h2 class="admin__title">Admin</h2>
 
     {{-- 検索フォーム --}}
-    <form action="{{ route('admin') }}" method="GET" class="admin__search">
+    <form action="{{ route('admin.index') }}" method="GET" class="admin__search">
 
-        <div class="admin-serch__group">
+        <div class="admin-search__group">
             <input type="text" name="name" placeholder="名前" value="{{ request('name') }}">
             <input type="text" name="email" placeholder="メールアドレス" value="{{ request('email') }}">
 
@@ -32,15 +32,14 @@
 
             <input type="date" name="date" value="{{ request('date') }}">
         </div>
-        
-        <div class="admin-serch__buttons">
+
+        <div class="admin-search__buttons">
             <button class="btn-search">検索</button>
-            <a href="{{ route('admin') }}" class="btn-reset">リセット</a>
+            <a href="{{ route('admin.index') }}" class="btn-reset">リセット</a>
         </div>
-        
+
     </form>
 
-    
     {{-- 管理画面テーブル --}}
     <table class="admin__table">
         <tr>

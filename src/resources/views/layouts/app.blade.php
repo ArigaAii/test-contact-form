@@ -33,7 +33,7 @@
             @if (Request::is('admin'))
                 <a href="{{ route('logout') }}" class="header__btn">logout</a>
             @endif
-            
+
         </div>
     </header>
 
