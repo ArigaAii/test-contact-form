@@ -1,47 +1,35 @@
-/* ===============================
-   Thanksページ
-=============================== */
-body {
-    background-color: #fff;
-    color: #826653;
-    font-family: "Noto Sans JP", sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+.header {
+  display: none;
 }
 
-.thanks__content {
-    text-align: center;
-    margin-top: 180px;
+.thanks-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-.thanks__content h2 {
-    font-size: 22px;
-    color: #826653;
-    font-weight: bold;
-    margin-bottom: 20px;
+.thanks-page__message {
+  font-weight: bold;
+  font-size: 24px;
 }
 
-.thanks__content p {
-    color: #826653;
-    font-size: 14px;
-    margin-bottom: 40px;
+.thanks-page__btn {
+  margin: 32px auto 0;
 }
 
-/* ===============================
-   HOMEボタン
-=============================== */
-.thanks__button a {
-    display: inline-block;
-    background-color: #826653;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 25px;
-    border-radius: 4px;
-    font-size: 14px;
-    transition: 0.3s;
+.thanks-page-bg__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  width: 100%;
+  text-align: center;
+  font-family: serif;
+  opacity: 0.05;
+  transform: translate(-50%, -50%);
 }
 
-.thanks__button a:hover {
-    background-color: #c7966d;
+.thanks-page-bg__text{
+  font-size: 18vw;
 }

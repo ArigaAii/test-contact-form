@@ -31,7 +31,13 @@
 
             {{-- Admin ページで Logout ボタンを表示 --}}
             @if (Request::is('admin'))
-                <a href="{{ route('logout') }}" class="header__btn">logout</a>
+                {{--<a href="{{ route('logout') }}" class="header__btn">logout</a>--}}
+                <form action="{{ route('logout') }}" method="POST" style="inline;">
+                    @csrf
+                    <button type="submit" class="header_btn">
+                        logout
+                    </button>
+                </form>
             @endif
 
         </div>

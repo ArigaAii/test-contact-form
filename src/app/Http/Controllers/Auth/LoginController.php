@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Models\User;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -17,6 +19,8 @@ class LoginController extends Controller
     // ログイン処理
     public function login(LoginRequest $request)
     {
+        \Log::info('LOGIN CONTROLLER RUNNING');
+
         $credentials = $request->only('email', 'password');
 
         //メールアドレス存在チェック
@@ -34,6 +38,17 @@ class LoginController extends Controller
         }
 
         $request->session()->regenerate();
-        return redirect('/');
+        return redirect('/admin');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        //ログアウト後にトップ（問い合わせフォーム）へ戻す
+        return redirect()->route('contact.index');
     }
 }

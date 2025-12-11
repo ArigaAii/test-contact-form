@@ -7,6 +7,8 @@ use Laravel\Fortify\Fortify;
 use Laravel\Fortify\Features;
 use Laravel\Fortify\Contracts\RegisterResponse;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Hash;
+use App\Models\User;
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -52,5 +54,19 @@ class FortifyServiceProvider extends ServiceProvider
             };
         
         });
+
+        Fortify::authenticateUsing(function ($request) {
+            $user = User::where('email', $request->email)->first();
+
+            if ($user && Hash::check($request->password, $user->password)) {
+                return $user;
+            }
+
+            return null;
+        });
+
+        Fortify::redirects([
+            'login' => '/admin',
+        ]);
     }
 }

@@ -9,7 +9,7 @@
     <h2 class="login__title">Login</h2>
 
 <div class="login__content">
-    <form method="POST" action="{{ route('login') }}" >
+    <form method="POST" action="/login" >
         @csrf
 
         <div class="form__group">

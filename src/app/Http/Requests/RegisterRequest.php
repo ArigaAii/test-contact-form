@@ -30,7 +30,7 @@ class RegisterRequest extends FormRequest
         ];
     }
 
-    public function massages()
+    public function messages()
     {
         return [
             'name.required' => 'お名前を入力して下さい',
